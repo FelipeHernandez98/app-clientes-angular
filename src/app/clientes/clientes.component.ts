@@ -21,13 +21,14 @@ export class ClientesComponent implements OnInit {
   public delete(cliente: Cliente): void {
     swal
       .fire({
-        title: 'Estas seguro?',
+        title: '¿Estas seguro?',
         text: 'Estas seguro de eliminar este uausrio',
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Si, eliminar!',
+        cancelButtonText: 'Cancelar'
       })
       .then((result) => {
         if (result.isConfirmed) {
